@@ -35,7 +35,8 @@ public class filterContent implements Filter {
         String path = (rq.getRequestURI());
         if (path.startsWith("/resources") || path.startsWith("/baitap/resources") ||path.startsWith("/baitap/index") || 
                 path.startsWith("/baitap/news") || path.startsWith("/baitap/partners") || path.startsWith("/baitap/recruitment")|| 
-                path.startsWith("/baitap/outsourcing")|| path.startsWith("/baitap/system-integration")|| path.startsWith("/baitap/consulting")) {
+                path.startsWith("/baitap/outsourcing")|| path.startsWith("/baitap/system-integration")|| path.startsWith("/baitap/consulting")
+                || path.startsWith("/baitap/contact")|| path.startsWith("/baitap/ErrorPage")) {
             chain.doFilter(request, response);
             return;
         }
